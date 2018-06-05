@@ -1,0 +1,138 @@
+html,body{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    height:100%;
+
+}
+.wrapper{
+    width:960px;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+.form{
+    flex:2;
+    &__fieldset{
+        border:none;
+    }
+    &__section-title{
+        font-weight: bold;
+        margin-top:15px;
+    }
+    &__badge{
+        background-color:black;
+        width:20px;
+        height: 20px;
+        display: inline-block;
+        text-align: center;
+        line-height: 20px;
+        color:#fff;
+        border-radius:10px;
+        margin-right:5px;
+    }
+    &__label{
+        display: block;
+        font-size:0.875em;
+    }
+    &__input-box{
+        display:inline-block;
+        width:calc(100% - 20px);
+        float:left;
+        padding:10px;
+        &--halfwidth{
+            width: calc(50% - 20px);
+        }
+    }
+    &__combo-box{
+        background-color: transparent;
+        background-image: url('https://d30y9cdsu7xlg0.cloudfront.net/png/399048-200.png');
+        background-size:25px 100%;
+        background-repeat: no-repeat;
+        background-position: right;
+        font-size:1.125em;
+        margin-top:-2px;
+        appearance: none;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    &__input{
+        width: 100%;
+        border:none;
+        border-bottom:2px solid #d3d3d3;
+        padding:4px 0;
+        border-radius:3px;
+        font-size:1.125em;
+        &:focus{
+            border-color:limegreen;
+        }
+        &--icon{
+            background-size:15px 50%;
+            background-repeat: no-repeat;
+            background-position:95% 10%;
+        }
+        &--question{
+            background-image: url(https://image.flaticon.com/icons/png/512/78/78299.png);
+        }
+        &--card{
+            background-image: url(http://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/Visa-icon.png);
+            background-size:30px 100%;
+        }
+    }
+    &__submit{
+        width:calc(100% - 20px);
+        margin: 10px;
+        font-weight: bold;
+        background-color: limegreen;
+        color:#fff;
+        border-radius:3px;
+        border:none;
+        padding:15px 0;
+        border-bottom:2px solid green;
+    }
+    &__label,
+    &__input{
+        padding-left:10px;
+    }
+}
+.order{
+    flex:1;
+    width:260px;
+    padding:0 10px;
+    font-size:0.875em;
+    &__title{
+        display:block;
+        margin-top:15px;
+        padding-top:10px;
+        border-top:1.5px dashed #d3d3d3;
+    }
+    &__list{
+        list-style: none;
+        padding:0;
+        border-bottom: 1.5px dashed #d3d3d3;
+        padding-bottom:15px;
+    }
+    &__total{
+        font-weight: bold;
+        padding-bottom: 40px;
+        border-bottom: 1.5px dashed #d3d3d3;
+    }
+    &__total-sum{
+        font-size:1.8em;
+    }
+    &__list-item,
+    &__calculation,
+    &__total{
+        margin:12px 0;
+        display:flex;
+        justify-content: space-between
+    }
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
